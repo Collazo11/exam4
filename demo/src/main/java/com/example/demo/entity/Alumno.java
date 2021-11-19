@@ -1,13 +1,17 @@
 package com.example.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.List;
 
 
-
+@Getter
+@Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Table(name = "Pro")
+@Table(name = "Alumnos")
 public class Alumno {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

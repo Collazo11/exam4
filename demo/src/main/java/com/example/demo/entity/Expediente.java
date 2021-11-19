@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Table(name = "Pro")
+@Table(name = "Expedientes")
 
 public class Expediente {
 

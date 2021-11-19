@@ -2,6 +2,7 @@ package com.example.demo.Controller;
 
 import com.example.demo.Service.AlumnoService;
 import com.example.demo.entity.Alumno;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
@@ -14,18 +15,17 @@ import java.util.List;
 public class AlumnoController {
 
     @Autowired
-    private AlumnoService service;
+    private AlumnoService alumnoService;
 
     @PostMapping
     public ResponseEntity<Alumno> addStudent(@RequestBody Alumno student) {
         System.out.println("Se hizo la solicitud");
-        service.AddAlumno(student);
+        alumnoService.AddAlumno(student);
         return ResponseEntity.ok(student);
 
     }
-//    @GetMapping("/{pornombre}/{nombrevariable}")
-//    public Alumno getAlumnoByName(@PathVariable("nombrevariable") String Nombre) {
-//        return service.getAlumno(nombre);
-//    }
-
+    @GetMapping("/{pornombre}/{nombrevariable}")
+    public Alumno getStudentByName(@PathVariable("nombrevariable") String nombre) {
+        return alumnoService.getAlumno(nombre);
+    }
 }

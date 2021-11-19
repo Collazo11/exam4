@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Table(name = "Pro")
+@Table(name = "Cursos")
 
 public class Curso {
     List<Contenido> contenidosList;
